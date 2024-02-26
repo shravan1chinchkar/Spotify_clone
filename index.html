@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/utility.css">
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- container consist of left and right box -->
+    <div class="container flex bg-black">
+
+        <!-- left side -->
+        <div class="leftbox  flex p-1">
+            <!-- left side top -->
+            <div class="lefttop bg-grey border-radius p-2">
+                <div class="logo-cross">
+                    <div class="logo invert">
+                        <img src="assets/images/logo.svg" alt="spotifylogo">
+                    </div>
+                    <div class="remove invert">
+                        <img src="assets/images/remove.svg" alt="remove">
+                    </div>
+                </div>
+                <ul class="invert">
+                    <li>
+                        <img src="assets/images/home.svg" alt="Home">Home
+                    </li>
+                    <li>
+                        <img src="assets/images/search.svg" alt="search"> Search
+                    </li>
+                </ul>
+            </div>
+
+            <!-- left side button -->
+            <div class="leftbottom border-radius bg-grey p-2">
+
+                <!-- header -->
+                <div class="leftbottom-header flex">
+                    <div class="library invert flex">
+                        <img src="assets/images/library.svg" alt="library">
+                        <h4>Your Library</h4>
+                    </div>
+                    <div class="pluscontainer invert">
+                        <img src="assets/images/plus.svg" alt="">
+                    </div>
+                </div>
+
+                <!-- main -->
+                <div class="leftbottom-main">
+                    <ul id="leftbottom-main-ul">
+                    </ul>
+                </div>
+
+                <!-- footer -->
+                <div class="leftbottom-footer">
+                    <a draggable="false" href="https://www.spotify.com/legal/cookies-policy/" target="_blank"
+                        rel="noopener">
+                        <span data-encore-id="text">Cookies</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- right side -->
+        <div class="rightbox p-1">
+
+
+            <!-- rightbox header -->
+            <div class="rightbox-header flex ">
+
+                <div class="hamburger-rightbox-nav">
+
+                    <!-- hamburger -->
+                    <div class="hamburger invert">
+                        <img src="assets/images/hamburger.svg" alt="hamburger">
+                    </div>
+
+                    <!-- right box nav -->
+                    <div class="rightbox-nav flex ">
+                        <div class="leftbutton-box">
+                            <img src="assets/images/leftarrow.svg" alt="leftbutton">
+                        </div>
+                        <div class="rightbutton-box">
+                            <img src="assets/images/rightarrow.svg" alt="rightbutton">
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="rightbox-header-button ">
+                    <button class="signup-button">Sign up</button>
+                    <button class="login-button">Log in</button>
+                </div>
+
+            </div>
+
+            <!-- rightbox main content -->
+            <div class="rightbox-main bg-grey text-color">
+
+                <!-- main section heading -->
+                <h2 class="playlisttitle">Spotify Platlists</h2>
+
+                <!-- main section content -->
+                <div  class="cardContainer">
+                
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- play button / play bar start here -->
+    <div class="playsong-button text-color bg-grey border-radius">
+
+        <!-- Info of the song which is currently playing -->
+        <div class="songinfo">
+        </div>
+
+        <!-- button to perform operation on the song -->
+        <div class="song-button-and-seek-bar ">
+
+            <!-- buttons to perform operation on the song -->
+            <div class="song-button">
+                <div class="previoussongbutton">
+                    <img src="assets/images/previous.svg" alt="previousbutton" id="previous">
+                </div>
+                <div class="playsongbutton invert">
+                    <img src="assets/images/play.svg" alt="playbutton" id="play">
+
+                </div>
+                <div class="nextsongbutton">
+                    <img src="assets/images/next.svg" alt="nextbutton" id="next">
+                </div>
+            </div>
+
+            <!-- seekbar of the song -->
+            <div class="seekbar">
+                <div class="seekbar-circle"></div>
+            </div>
+        </div>
+
+        <!-- Display the timing of the song -->
+        <div class="song-time-volume-button">
+            <div class="song-time">
+
+            </div>
+            <div class="volume ">
+                <img class="invert" src="assets/images/volume.svg" alt="volume">
+                <div class="range">
+                    <input type="range" name="volume" id="">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script/script.js"></script>
+</body>
+
+</html>
