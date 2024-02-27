@@ -128,7 +128,7 @@ async function displayAlbums(){
 
 async function main(){
     // get the list of all the songs from the "songs folder" into the website
-    await getSongs("songs/TeriBaatonMeinAisaUljhaJiya");
+    songs=await getSongs("songs/TeriBaatonMeinAisaUljhaJiya");
     playmusic(songs[0].replaceAll("%20"," "),true);
 
     // Display all the albums on the page
