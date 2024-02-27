@@ -8,7 +8,7 @@ async function getSongs(folder)
 {
     // get all the songs from the songs folder
     currentFolder=folder;
-    let a=await fetch(`http://127.0.0.1:5500/${folder}/`);
+    let a=await fetch(`${folder}/`);
     let response=await a.text();
     let div=document.createElement("div");
     div.innerHTML=response;    
@@ -24,7 +24,7 @@ async function getSongs(folder)
     // Show all the songs in the playlist
     ul.innerHTML=" ";
     for (const song of songs) { 
-        let a=await fetch(`http://127.0.0.1:5500/${folder}/info.json`);
+        let a=await fetch(`${folder}/info.json`);
         let response=await a.json();
         let modifiedsong=song.replaceAll("%20"," ");
         ul.innerHTML=ul.innerHTML + 
@@ -86,7 +86,7 @@ function secondsToMinutesSeconds(seconds) {
 }
 
 async function displayAlbums(){
-    let a=await fetch(`http://127.0.0.1:5500/songs/`);
+    let a=await fetch(`songs/`);
     let response=await a.text();
     let div=document.createElement("div");
     div.innerHTML=response;
@@ -98,7 +98,7 @@ async function displayAlbums(){
         {
             let folder=(e.href.split("/").slice(-1)[0]);
             // Get the metadata of the folder
-            let a=await fetch(`http://127.0.0.1:5500/songs/${folder}/info.json`);
+            let a=await fetch(`songs/${folder}/info.json`);
             let response=await a.json(); 
             let cardcontainer=document.querySelector(".cardContainer");
             // populating the cards dynamically using js
